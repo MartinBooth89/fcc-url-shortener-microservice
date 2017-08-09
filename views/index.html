@@ -1,0 +1,67 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A Url Shortener</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        A Url Shortener
+      </h1>
+      
+      <h2>
+        Usage
+      </h2>
+      <h3>
+        /shorten/url
+      </h3>
+      url: a valid URL to shorten, e.g. <code>http://a.b.c</code>
+      <br/><br/>
+      returns: a JSON object in the format <code>{"original_url": "http://a.b.c", "short_url": <b>1234</b>}</code>
+      <br/><br/>
+      error: if the url is not valid
+      
+      <br/><br/><br/>
+      
+      <h3>
+        /visit/short-url
+      </h3>
+      short-url: an integer returned by /shorten/url, e.g. <code>1234</code>
+      <br/><br/>
+      redirects to original url, e.g. <code>http://a.b.c</code>
+      <br/><br/>
+      error: if the short-url does not exist, or if the short-url is not an integer
+    </header>
+
+    <main>
+    </main>
+
+    <footer>
+      <a href="https://glitch.com">
+        Remix this in Glitch
+      </a>
+    </footer>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+
+  </body>
+</html>
