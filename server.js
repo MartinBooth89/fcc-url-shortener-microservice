@@ -34,7 +34,6 @@ function getNextAvailableShortUrl(response, url, db, sites, callback) {
            }
        }
      ], (error, max) => {
-       console.log(max);
        callback(response, url, db, sites, max[0].maxShort + 1);
      }
   )
@@ -71,7 +70,6 @@ function createShortUrl(response, url) {
 
         getNextAvailableShortUrl(response, url, db, sites, insertShortUrl);
       }
-
     });
   });
 } 
